@@ -1,0 +1,22 @@
+{
+  "name": "your-tempo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ColdPotatoes/Your-Tempo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ColdPotatoes/Your-Tempo/issues"
+  },
+  "homepage": "https://github.com/ColdPotatoes/Your-Tempo#readme",
+  "dependencies": {
+    "discord.js": "^13.1.0"
+  }
+}
