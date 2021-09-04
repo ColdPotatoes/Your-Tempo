@@ -30,8 +30,13 @@ client.on('message', message => {
 
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
-    
-    
+
+    switch (command) {
+        case 'hello': 
+            client.commands.get('hello').execute(message, args);
+            break;
+        
+    }
 });
 
-client.login('ODgzNzU4Mzc2MDQxOTc5OTA0.YTOmIA.Ol779mryo1i4lPZT6a1Qh54B-7g');
+client.login('ODgzNzU4Mzc2MDQxOTc5OTA0.YTOmIA.NAH9S3bs8Rgxl95jedi1WkKzTx4');
