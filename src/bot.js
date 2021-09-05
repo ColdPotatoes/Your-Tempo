@@ -60,7 +60,8 @@ client.on('message', message => {
             break;
         case 'collect':
             client.commands.get('collect').execute(message, args);
+            break;
     }
 });
 
-client.login('ODgzNzU4Mzc2MDQxOTc5OTA0.YTOmIA.u5kqW1e0TtdgUaSV4MaiEMcocsk');
+client.login('ODgzNzU4Mzc2MDQxOTc5OTA0.YTOmIA.JCQesmQ0sMLmV_R86-B1wIvp07Q');
