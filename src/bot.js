@@ -58,7 +58,9 @@ client.on('message', message => {
         case 'jaemin':
             client.commands.get('Jaemin').execute(message, args, client);
             break;
+        case 'collect':
+            client.commands.get('collect').execute(message, args);
     }
 });
 
-client.login('ODgzNzU4Mzc2MDQxOTc5OTA0.YTOmIA.R7enQzy0OAo9Le-I4nzWo80_R6k');
+client.login('ODgzNzU4Mzc2MDQxOTc5OTA0.YTOmIA.u5kqW1e0TtdgUaSV4MaiEMcocsk');

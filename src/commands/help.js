@@ -4,7 +4,6 @@ module.exports = {
     name: 'help',
     description: 'displays helpful information',
     execute(message, args) {
-        console.log(args)
 
         if (args[0] === 'commands') {
             const commandsEmbed = new MessageEmbed()
