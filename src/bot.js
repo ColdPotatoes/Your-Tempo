@@ -17,7 +17,7 @@ client.events = new Collection();
 const eventFiles = fs.readdirSync("./src/events").filter(file => file.endsWith(".js"));
 const commandsFolder = fs.readdirSync("./src/commands");
 
-const prefix = "-"
+const prefix = '-';
 
 for (const file of commandsFolder) {
     const command = require(`./commands/${file}`);
@@ -32,7 +32,7 @@ for (const file of eventFiles) {
 
 client.on('ready', () => {
     client.events.get('start').execute();
-})
+});
 
 client.on('message', message => {
 
@@ -51,16 +51,10 @@ client.on('message', message => {
         case 'avatar':
             client.commands.get('avatar').execute(message, args);
             break;
-        case 'clara':
-            client.commands.get('clara').execute(message, args, client);
-            break;
-        case 'jaemin':
-            client.commands.get('Jaemin').execute(message, args, client);
-            break;
-        case 'collect':
-            client.commands.get('collect').execute(message, args);
+        case 'tempo':
+            client.commands.get('music').execute(message, args);
             break;
     }
 });
 
-client.login('ODgzNzU4Mzc2MDQxOTc5OTA0.YTOmIA.Jw4g66fVHhH_Hp91hXLEQcLbw7Q');
+client.login('ODgzNzU4Mzc2MDQxOTc5OTA0.YTOmIA.eBi4vJLRMiJkkxyT7bya0Uh8bYg');
