@@ -1,11 +1,12 @@
-const { Client, Intents, MessageAttachment, MessageEmbed, Collection } = require('discord.js');
-const client = new Client({ intents: 
-    [
-        Intents.FLAGS.GUILDS, 
-        Intents.FLAGS.GUILD_MESSAGES, 
-        Intents.FLAGS.GUILD_MEMBERS, 
-        Intents.FLAGS.GUILD_MESSAGE_REACTIONS
-    ] 
+const { Client, Intents, Collection } = require('discord.js');
+const client = new Client({
+    intents:
+        [
+            Intents.FLAGS.GUILDS,
+            Intents.FLAGS.GUILD_MESSAGES,
+            Intents.FLAGS.GUILD_MEMBERS,
+            Intents.FLAGS.GUILD_MESSAGE_REACTIONS
+        ]
 });
 const fs = require('fs');
 
@@ -29,8 +30,6 @@ for (const file of eventFiles) {
     client.events.set(event.name, event);
 }
 
-
-
 client.on('ready', () => {
     client.events.get('start').execute();
 })
@@ -41,7 +40,7 @@ client.on('message', message => {
 
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
-
+    
     switch (command) {
         case 'hello':
             client.commands.get('hello').execute(message, args);
@@ -64,4 +63,4 @@ client.on('message', message => {
     }
 });
 
-client.login('ODgzNzU4Mzc2MDQxOTc5OTA0.YTOmIA.JCQesmQ0sMLmV_R86-B1wIvp07Q');
+client.login('ODgzNzU4Mzc2MDQxOTc5OTA0.YTOmIA.Jw4g66fVHhH_Hp91hXLEQcLbw7Q');
